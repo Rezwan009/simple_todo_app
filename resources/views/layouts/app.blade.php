@@ -40,7 +40,7 @@
               <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/todos">TodoApp<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/todos">Todo<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>

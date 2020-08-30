@@ -4,7 +4,7 @@
 
   <div class="text-center" style="width: 40%;">
     @include('response.response')
-    <h1 class="display-3 text-white mb-3">Edit Todo App</h1>
+    <h1 class="display-5 text-white mb-3">Edit Todo Item *{{$todo->title}}* from Todo List</h1>
     {{ Form::open(['route' => ['todos.update', $todo->id],'method' => 'post',
       'name'=>'form-todo-update','id'=>'form-todo-update']) }}
     @method('PATCH')

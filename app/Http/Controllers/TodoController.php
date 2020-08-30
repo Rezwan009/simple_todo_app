@@ -138,7 +138,24 @@ class TodoController extends Controller
    */
   public function destroy(Todo $todo)
   {
-    $todo->delete();
-    return redirect('/todos');
+    $res = array(
+      'success' => false,
+      'message' => 'Please fix the error below.',
+      'rs_class' => 'danger',
+      'data' => []
+    );
+    $success = $todo->delete();
+    if ($success) {
+
+      $res['success'] = true;
+      $res['rs_class'] = 'success';
+      $res['message'] = 'Todo Deleted  successfuly';
+
+      return redirect('/todos')->with('response', $res);
+    } else {
+      $res['success'] = false;
+      $res['rs_class'] = 'danger';
+      $res['message'] = 'Something went wrong. Please check the error(s):';
+    }
   }
 }

@@ -30,12 +30,12 @@
       @else
       <div class="w-100 d-flex justify-content-between align-items-center">
         <div class="py-3 ml-2"><del>{{$todo->title }}</del></div>
-        <div class="mr-4 d-flex align-items-center">
+        <!-- <div class="mr-4 d-flex align-items-center">
           {{ Form::open(['route' => ['todos.destroy', $todo->id],'method' => 'post','name'=>'form-todo-delete','id'=>'form-todo-delete']) }}
           @method('DELETE')
           <button type="submit" class=" border-0 bg-transparent "><i class="fa fa-trash fa-2x"></i></button>
           {{ Form::close() }}
-        </div>
+        </div> -->
       </div>
       @endif
 
